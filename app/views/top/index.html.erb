@@ -35,7 +35,7 @@
                         <a class="">member</a>
                     </li>
                     <li>
-                        <a class="" >Logout</a>
+                        <a class="" ><%= link_to "logout", destroy_user_session_path, method: :delete, class: 'header_char'%></a>
                     </li>
                 </ul>
             </div>
