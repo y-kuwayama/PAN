@@ -1,3 +1,76 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.title_panna{
+  font-size: 30px;
+}
+
+.navbar-header .red{
+  color:red;
+}
+
+
+.intro{
+  background-image: url('main.jpg');
+  background-position: center;
+}
+
+
+#space {
+  padding-left: 40px;
+}
+
+#massage{
+  padding-top: 60px;
+}
+
+#style {
+
+  padding: 0;
+  width:100%;
+  display: inline-block;
+}
+
+#style2 {
+  padding: 0;
+  margin:0;
+  width:100%;
+  display: inline-block;
+  text-align: left;
+}
+.style2:after{
+  content: "";
+  clear: both;
+  display: block;
+  height:100%;
+}
+
+.youtube{
+  width: 650px;
+  text-align:left;
+  float: left;
+  clear: both;
+}
+.youtube:after{
+  content: "";
+  clear: both;
+  display: block;
+  height:100%;
+}
+
+
+.right_contents_massage{
+  display: inline-block;
+  height: 350px;
+  width:50%;
+  margin:0 auto;
+  text-align: center;
+}
+
+.rightmassage{
+  margin-top: 50px;
+}
+
+
+
+#under_contents{
+  width:100%;
+  background: black;
+}
