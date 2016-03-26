@@ -14,7 +14,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav", id="moji">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
@@ -29,13 +29,13 @@
                         <a class="page-scroll" href="#style">style</a>
                     </li>
                     <li>
-                        <a id="space" ><%= link_to "mypage", user_path(current_user), class: 'header_char'%></a>
+                        <%= link_to "mypage", user_path(current_user), id:"space" %>
                     </li>
                     <li>
                         <a class="">member</a>
                     </li>
                     <li>
-                        <a class="" ><%= link_to "logout", destroy_user_session_path, method: :delete, class: 'header_char'%></a>
+                        <%= link_to "logout", destroy_user_session_path, method: :delete, id:"moji_white"%>
                     </li>
                 </ul>
             </div>
@@ -62,7 +62,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="massage" class="container content-section text-center" style="height:100px;">
+    <section id="massage" class="container content-section text-center" >
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Futebolisuta</h2>
@@ -72,7 +72,7 @@
     </section>
 
     <!-- Download Section -->
-    <section  class="content-section text-center">
+    <section  class="content-section text-center" style="padding:0;">
         <div id="now" class="download-section" style="height:500px;">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
