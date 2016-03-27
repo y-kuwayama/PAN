@@ -1,44 +1,62 @@
-<head>
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/">
+                    <span class="title_panna">PANN<span class="red">A.</span>P</span>
+                </a>
+            </div>
 
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav", id="moji">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="">member</a>
+                    </li>
+                    <li>
+                        <%= link_to "logout", destroy_user_session_path, method: :delete, id:"moji_white"%>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+  </div>
+        <!-- /.container -->
+</nav>
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-</head>
-    <div id="my_page_all" class="container content-section text-center">
-    <p class='mypage_black_shadow'></p>
-    <div class='out_of_headder'>
-        <div id='contents_area'class="row">
-          <div id="contents_area2" class="col-4">
+
+
+
+
+
+
+<div id="my_page_all" >
+  <p class='mypage_black_shadow'></p>
+  <div class='out_of_headder'>
+        <div id='contents_area'>
+
              <div class="left_myapage">
-               <h2><%= @user.family_name %><span><%= @user.first_name %></span></h2>
-                <% if current_user.id == @user.id %>
-                 <div class="profile_edit">
-                  <%= link_to "プロフィール編集", edit_user_path(current_user), {:class => "btn btn-primary withripple" }%>
-                  </div>
+                <h2><%= @user.family_name %><span><%= @user.first_name %></span></h2>
+                <h4>あいうえお<h4>
+                 <% if current_user.id == @user.id %>
+                    <div class="profile_edit">
+                    <%= link_to "プロフィール編集", edit_user_path(current_user), {:class => "btn btn-primary withripple" }%>
+                    </div>
                  <% end %>
              </div>
-             <div id="contents_area3" class="col-7">
-               <div class="right_mypage">
-                    <p>soccer</p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
 
-<div class="row form">
-  <div class="col-lg-12">
-    <div class="hennsyuu">
-    <h3>プロフィールの編集が完了しました。</h3>
-    <%= link_to "ホームに戻る", root_path %>
-  </div>
+
+            <div class="right_mypage">
+                    <p>soccer</p>
+            </div>
+
+        </div>
   </div>
 </div>
 
@@ -54,13 +72,3 @@
 
 
 
-<!-- <div id="my_page_all" >
- <p class='mypage_black_shadow'></p>
-  <div id="to_center" >
-    <div class="left_contents">
-         <p class='mypage_black_shadow2'></p>
-         <p class="mypage_a"><%= @user.family_name %></p>
-    </div>
-    <div class="right_contents"></div>
-  </div>
-</div> -->
