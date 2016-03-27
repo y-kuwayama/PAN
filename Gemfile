@@ -46,5 +46,6 @@ group :development do
   gem 'pry-rails'
   gem "font-awesome-rails"
   gem 'devise'
+  # gem 'actionpack-page_caching'
 end
 

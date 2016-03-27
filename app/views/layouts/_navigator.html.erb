@@ -1,17 +1,14 @@
-<% unless params[:controller] == 'devise/registrations' || params[:controller] == 'devise/sessions' || params[:controller] == 'devise/passwords' %>
+
+<% if params[:controller] == 'top' %>
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <!-- <a class="navbar-brand page-scroll" href="#page-top"> -->
-                <%= link_to root_path  do %>
-                    <div class="navbar-brand page-scroll" href="#page-top">
-                     <i class="title_panna">PANN<span class="red">A.</span>P</i>
-                    </div>
-                <% end %>
-                <!-- </a> -->
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <span class="title_panna">PANN<span class="red">A.</span>P</span>
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
