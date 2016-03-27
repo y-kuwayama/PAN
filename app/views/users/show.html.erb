@@ -40,10 +40,20 @@
   <p class='mypage_black_shadow'></p>
   <div class='out_of_headder'>
         <div id='contents_area'>
-
              <div class="left_myapage">
-                <h2><%= @user.family_name %><span><%= @user.first_name %></span></h2>
-                <h4>あいうえお<h4>
+                <h4><%= @user.family_name %>   <span><%= @user.first_name %></span></h4>
+                <div class="image" style="background-image: url(<%= @user.avatar.url(:medium) %>);"></div>
+                 <div class="prof_contents">
+                       <div class="birth">
+                        <p>birth</p> <p>1988.07.12</p>
+                      </div>
+                      <div class="fav">
+                        <p>fav player</p> <p>Nymar</p>
+                      </div>
+                      <div class="massage">
+                        <p>massage</p> <p>hijo de puta</p>
+                      </div>
+                </div>
                  <% if current_user.id == @user.id %>
                     <div class="profile_edit">
                     <%= link_to "プロフィール編集", edit_user_path(current_user), {:class => "btn btn-primary withripple" }%>
@@ -53,7 +63,9 @@
 
 
             <div class="right_mypage">
-                    <p>soccer</p>
+                    <p>Do you wanna play?</p>
+                    <p>Are You Ready?</p>
+                    <p>We are waitin for your attendance.</p>
             </div>
 
         </div>

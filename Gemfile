@@ -46,6 +46,7 @@ group :development do
   gem 'pry-rails'
   gem "font-awesome-rails"
   gem 'devise'
-  gem 'jquery-turbolinks'
+  gem 'jquery-turbolinks'#ページ遷移修正gem
+  gem 'paperclip'
 end
 
