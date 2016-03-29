@@ -68,16 +68,17 @@
                     <p>We are waiting for your attendance.</p>
                     <br>
                     <br>
-                    <div class="court">
-                    <p><京都南></p>
-                   </div>
+                   
                         <div class="row form">
                           <div class="col-lg-12">
                             <%= form_for @schedule do |f| %>
 
                              <div class="form-group">
                              <div class="time_table">
-                               <%= f.date_select :month %>
+                              <div class="court">
+                    <p><京都南></p>
+                   </div>
+                             <div class="month"><%= f.select :month,['1','2','3','4','5','6','7','8','9','10','11','12'] %>月<%= f.select :day,['1','2','3','4','5','6','7','8','9','10','11','12'] %>日</div><br>
                                <div class="time">8:00<%= f.check_box :t8, placeholder: "stadium" %></div>
                                <div class="time">9:00<%= f.check_box :t9, placeholder: "stadium" %></div>
                                <div class="time">10:00<%= f.check_box :t10, placeholder: "stadium" %></div>
@@ -94,8 +95,7 @@
                                <div class="time">21:00<%= f.check_box :t21, placeholder: "stadium" %></div>
                                <div class="time">22:00<%= f.check_box :t22, placeholder: "stadium" %></div>
                                <div class="time">23:00<%= f.check_box :t23, placeholder: "stadium" %></div>
-                               <div class="time">24:00<%= f.check_box :stadium, placeholder: "stadium" %></div>
-
+                              
 
                              </div>
 

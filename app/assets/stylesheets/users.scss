@@ -238,30 +238,23 @@ html, body {
   padding-top: 20px;
   p{font-size: 30px;}
   .court{text-align: left;
-    padding-left: 10%;
-    p{margin: 0;}}
+    padding-left: 5%;
+    display: inline-block;
+    p{margin: 0;
+      display: inline-block;}}
   }
 
 .month{
-  color: black;
-  padding-left: 5%;
-  input{height:30px;
-        width: 250px;
-        color: black;
-        text-align: center}
+ display: inline-block;
+ padding-left: 3%;
 }
 
-// .month:after{
-//   content: "";
-//   clear: both;
-//   display: block;
-//   height:100%;
-// }
+
 
 .time{
   display: inline;
   float: left;
-  padding-left: 5%;
+  padding-left: 6%;
 }
 
 
