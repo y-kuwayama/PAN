@@ -5,9 +5,9 @@ class UsersController < ApplicationController
     @schedule = Schedule.new
   end
 
-def create
-  Schedule.create
-end
+# def create
+#   Schedule.create
+# end
 
 
   def edit

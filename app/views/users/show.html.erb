@@ -68,25 +68,49 @@
                     <p>We are waiting for your attendance.</p>
                     <br>
                     <br>
-                    <p>1.select studium(A or B or A＆B)</p>
-<div class="row form">
-  <div class="col-lg-12">
-    <%= form_for @schedule do |f| %>
+                    <div class="court">
+                    <p><京都南></p>
+                   </div>
+                        <div class="row form">
+                          <div class="col-lg-12">
+                            <%= form_for @schedule do |f| %>
 
-      <div class="form-group">
-        <div class="col-lg-6">
-          <%= f.text_field :stadium, placeholder: "stadium" %>
-        </div>
-      <div class="form-group">
-        <%= f.submit "送信", class: "btn btn-primary withripple" %>
-      </div>
-    <% end %>
-  </div>
-</div>
-            </div>
+                             <div class="form-group">
+                             <div class="time_table">
+                               <%= f.date_select :month %>
+                               <div class="time">8:00<%= f.check_box :t8, placeholder: "stadium" %></div>
+                               <div class="time">9:00<%= f.check_box :t9, placeholder: "stadium" %></div>
+                               <div class="time">10:00<%= f.check_box :t10, placeholder: "stadium" %></div>
+                               <div class="time">11:00<%= f.check_box :t11, placeholder: "stadium" %></div>
+                               <div class="time">12:00<%= f.check_box :t12, placeholder: "stadium" %></div>
+                               <div class="time">13:00<%= f.check_box :t13, placeholder: "stadium" %></div>
+                               <div class="time">14:00<%= f.check_box :t14, placeholder: "stadium" %></div>
+                               <div class="time">15:00<%= f.check_box :t15, placeholder: "stadium" %></div>
+                               <div class="time">16:00<%= f.check_box :t16, placeholder: "stadium" %></div>
+                               <div class="time">17:00<%= f.check_box :t17, placeholder: "stadium" %></div>
+                               <div class="time">18:00<%= f.check_box :t18, placeholder: "stadium" %></div>
+                               <div class="time">19:00<%= f.check_box :t19, placeholder: "stadium" %></div>
+                               <div class="time">20:00<%= f.check_box :t20, placeholder: "stadium" %></div>
+                               <div class="time">21:00<%= f.check_box :t21, placeholder: "stadium" %></div>
+                               <div class="time">22:00<%= f.check_box :t22, placeholder: "stadium" %></div>
+                               <div class="time">23:00<%= f.check_box :t23, placeholder: "stadium" %></div>
+                               <div class="time">24:00<%= f.check_box :stadium, placeholder: "stadium" %></div>
 
-        </div>
-  </div>
+
+                             </div>
+
+
+
+                              <div class="form-group">
+                                <%= f.submit "送信", class: "btn btn-primary withripple" %>
+                              </div>
+                            <% end %>
+                        </div>
+                   </div>
+              </div>
+
+         </div>
+   </div>
 </div>
 
 
