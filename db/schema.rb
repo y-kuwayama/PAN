@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328052253) do
+ActiveRecord::Schema.define(version: 20160329130805) do
 
   create_table "notes", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -22,9 +22,6 @@ ActiveRecord::Schema.define(version: 20160328052253) do
 
   create_table "schedules", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
-    t.integer  "stadium",    limit: 4
-    t.integer  "month",      limit: 4
-    t.integer  "day",        limit: 4
     t.integer  "t8",         limit: 4
     t.integer  "t9",         limit: 4
     t.integer  "t10",        limit: 4
