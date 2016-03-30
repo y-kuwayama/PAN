@@ -105,7 +105,7 @@ html, body {
 
 #contents_area{
   width:100%;
-  height: 100%;
+  // height: 100%;
 
 }
 
@@ -125,7 +125,7 @@ html, body {
   background-color: rgba(0,0,0,0.6);
   z-index: 1;
   position: relative;
-  float: left;
+  // float: left;
   margin-top:70px;
   vertical-align: center;
   text-align: center;
@@ -216,25 +216,33 @@ html, body {
   padding: 5%;
 }
 
+.left_under{
+  height: 60px;
+  width: 60px;
+  background: red;
+  float: left;
+}
+
 
 
 
 
 .right_mypage{
-  width: 600px;
-  height: 60%;
+  width: 800px;
+  height: 50%;
   color: white;
   margin: 0 auto;
   // min-width: 512px;
-  background-color: red;
+  // background-color: red;
   vertical-align: middle;
   text-align: center;
   background-color: rgba(0,0,0,0.6);
   z-index: 1;
   position: relative;
-  margin-top: 70px;
-  margin-left: 5%;
-  float: left;
+  margin-top: 50px;
+  margin-bottom: 5%;
+  // margin-left: 5%;
+  // float: left;
   padding-top: 20px;
   p{font-size: 30px;}
   .court{text-align: left;
@@ -278,9 +286,6 @@ html, body {
 
 
 
-
-
-
 .edit_all_area{
   margin-top: 100px;
 }
@@ -298,6 +303,42 @@ html, body {
    font-size: 30px;
    display: inline;
    line-height: 60px;
-
-
 }
+
+
+.attend_date{
+  height: 200px;
+  width: 600px;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  text-align: center;
+  p{
+    padding-top: 20px;
+    font-size: 30px;
+    margin: 0;
+  }
+}
+
+.attend_minami{
+  text-align: left;
+  padding-left: 5%;
+  margin-top:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User.find(params[:id])
+    @users = User.find(params[:id])
     @schedule = Schedule.new
     @schedule2 = Schedule2.new
+    @attend_dates = Schedule.where(user_id:current_user.id)
   end
 
 # def create
