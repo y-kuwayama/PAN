@@ -311,6 +311,8 @@ html, body {
   width: 600px;
   margin: 0 auto;
   background-color: rgba(0,0,0,0.6);
+ position:relative;
+  z-index: 2;
   color: white;
   text-align: center;
   p{
@@ -322,7 +324,7 @@ html, body {
 
 
 .attendance_contents{
-  width: 400px;
+  width: 500px;
   height: 500px;
   text-align: center;
   margin: 0 auto;
@@ -332,9 +334,13 @@ html, body {
   text-align: left;
   margin-top:20px;
   float: left;
+  z-index: 3;
+  padding-left: 20px;
   p{
     line-height: 30px;
   }
+  a{color: white;
+    font-size: 20px;}
 }
 
 
@@ -346,13 +352,15 @@ html, body {
 }
 
 .attend_yoko{
-  float: left;
+  float: right;
   margin-top: 20px;
   text-align: left;
+  padding-right: 20px;
   p{
-    padding-left: 100px;
     line-height: 30px;
   }
+  a{color: white;
+    font-size: 20px;}
 }
 
 

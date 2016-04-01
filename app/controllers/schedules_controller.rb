@@ -6,6 +6,13 @@ def create
   Schedule.create(schedule_params)
 end
 
+def destroy
+  schedule = Schedule.find(params[:id])
+      if schedule.user_id == current_user.id
+        schedule.destroy
+      end
+end
+
 
 
     private
