@@ -83,7 +83,7 @@ html, body {
   position: relative;
   z-index: 0;
   padding: 0;
-  height: 1800px;
+  height: 2500px;
   // min-width: 1024px;
   }
 
@@ -151,12 +151,12 @@ html, body {
 
 .birth{
   margin:5%;
-  margin-left: 6%;
+  margin-left: 10px;
   p{
   text-decoration: underline;
   float: left;
   margin: 0;
-  padding-left: 18%;
+  padding-left: 70px;
   margin: 0 auto;
  }
 
@@ -172,12 +172,12 @@ html, body {
 
 .fav{
   margin:5%;
-  margin-left: 16%;
+  margin-left: 60px;
   p{
     text-decoration: underline;
   float: left;
   margin: 0;
-  padding-left: 7%;
+  padding-left: 20px;
   margin: 0 auto;
  }
 
@@ -307,7 +307,7 @@ html, body {
 
 
 .attend_date{
-  height: 200px;
+  height: 600px;
   width: 600px;
   margin: 0 auto;
   background-color: rgba(0,0,0,0.6);
@@ -320,15 +320,40 @@ html, body {
   }
 }
 
+
+.attendance_contents{
+  width: 400px;
+  height: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .attend_minami{
   text-align: left;
-  padding-left: 5%;
   margin-top:20px;
+  float: left;
+  p{
+    line-height: 30px;
+  }
 }
 
 
+.attend_minami:after{
+  content: "";
+  clear: both;
+  display: block;
+  height:100%;
+}
 
-
+.attend_yoko{
+  float: left;
+  margin-top: 20px;
+  text-align: left;
+  p{
+    padding-left: 100px;
+    line-height: 30px;
+  }
+}
 
 
 

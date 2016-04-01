@@ -4,7 +4,8 @@ class UsersController < ApplicationController
     @users = User.find(params[:id])
     @schedule = Schedule.new
     @schedule2 = Schedule2.new
-    @attend_dates = Schedule.where(user_id:current_user.id)
+    @attend_dates = Schedule.where(user_id:current_user.id).order(month: :asc, day: :asc)
+    @attend_dates2 = Schedule2.where(user_id:current_user.id).order(month: :asc, day: :asc)
   end
 
 # def create
