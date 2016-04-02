@@ -1,3 +1,25 @@
+<% unless current_user.full_profile? %>
+  <header class="header_top panel panel-default col-lg-12 no-profile">
+    <h2>まずは、あなたのプロフィールを登録しましょう！</h2>
+    <%= link_to "プロフィールを登録する", edit_user_path(current_user), { class: "btn btn-lg btn-primary withripple" } %>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% else %>
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
   <div class="container">
             <div class="navbar-header">
@@ -45,13 +67,13 @@
                 <div class="image" style="background-image: url(<%= @users.avatar.url(:medium) %>);"></div>
                  <div class="prof_contents">
                        <div class="birth">
-                        <p>birth</p> <p>1988.07.12</p>
+                        <p>birth</p> <p><%= @users.birth %></p>
                       </div>
                       <div class="fav">
-                        <p>fav player</p> <p>Nymar</p>
+                        <p>fav player</p> <p><%= @users.fav %></p>
                       </div>
                       <div class="massage">
-                        <p>massage</p> <p>hijo de puta</p>
+                        <p>massage</p> <p><%= @users.massage %></p>
                       </div>
                 </div>
                  <% if current_user.id == @users.id %>
@@ -155,7 +177,7 @@
 
    </div>
 </div>
-
+<% end %>
 
 
 

@@ -1,26 +1,43 @@
-<div class="edit_all_area">
-<div class="row form">
-  <div class="col-lg-12">
-    <%= form_for current_user do |f| %>
-      <h2>登録情報</h2>
-      <div class="form-group">
-        <div class="col-lg-6">
-          <%= f.file_field :avatar, class: "form-control floating-label", placeholder: "画像アップロード" %>
+
+
+<div id="edit_page_all" >
+  <p class='mypage_black_shadow'></p>
+  <div class='out_of_headder'>
+        <div id='edit_area'>
+             <div class="left_myapage">
+              <div class="edit_all_area">
+                <div class="row form">
+                  <div class="col-lg-12">
+                    <%= form_for current_user do |f| %>
+                      <h2>登録情報</h2>
+                      <div class="form-group">
+                        <div class="edit_contents">
+                          <%= f.file_field :avatar, class: "form-control floating-label", placeholder: "画像アップロード" %>
+                        </div>
+                        <div class="edit_contents">
+                          <%= f.text_field :family_name, placeholder: "姓", class: "form-control" %>
+                        </div>
+                        <div class="edit_contents">
+                          <%= f.text_field :first_name, placeholder: "名", class: "form-control" %>
+                        </div>
+                        <div class="edit_contents">
+                          <%= f.text_field :birth, placeholder: "生年月日", class: "form-control" %>
+                        </div>
+                        <div class="edit_contents">
+                          <%= f.text_field :fav, placeholder: "お気に入りの選手", class: "form-control" %>
+                        </div>
+                        <div class="edit_contents">
+                          <%= f.text_field :massage, placeholder: "一言", class: "form-control" %>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <%= f.submit "送信", class: "btn btn-primary withripple" %>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+             </div>
         </div>
-        <div class="col-lg-6">
-          <%= f.text_field :family_name, placeholder: "姓", class: "form-control" %>
-        </div>
-        <div class="col-lg-6">
-          <%= f.text_field :first_name, placeholder: "名", class: "form-control" %>
-        </div>
-      </div>
-      <div class="form-group">
-        <%= f.submit "送信", class: "btn btn-primary withripple" %>
-      </div>
-    <% end %>
   </div>
 </div>
-  </div>
-
-
- 

@@ -11,4 +11,10 @@ class User < ActiveRecord::Base
 
 has_many :schedules
 
+
+  def full_profile?
+    avatar? && family_name? && first_name? && birth? && fav? && massage?
+  end
+
+
 end

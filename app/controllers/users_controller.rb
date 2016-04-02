@@ -8,9 +8,7 @@ class UsersController < ApplicationController
     @attend_dates2 = Schedule2.where(user_id:current_user.id).order(month: :asc, day: :asc)
   end
 
-# def create
-#   Schedule.create
-# end
+
 
 
   def edit
@@ -22,7 +20,7 @@ class UsersController < ApplicationController
 
   private
   def update_params
-    params.require(:user).permit(:family_name, :first_name, :avatar)
+    params.require(:user).permit(:family_name, :first_name, :avatar, :birth, :fav, :massage)
   end
 
 
