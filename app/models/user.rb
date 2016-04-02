@@ -13,7 +13,7 @@ has_many :schedules
 
 
   def full_profile?
-    avatar? && family_name? && first_name? && birth? && fav? && massage?
+    avatar? && family_name? && first_name? && day? && fav? && massage?
   end
 
 
