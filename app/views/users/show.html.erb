@@ -98,7 +98,7 @@
                                     <div class="court">
                                      <p>＜京都南＞</p>
                                     </div>
-                                    <div class="month"><%= f.select :month,['01','02','03','04','05','06','07','08','09','10','11','12'] %>月<%= f.select :day,['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'] %>日</div><div class="submit"><%= f.submit "送信", class: "btn btn-primary withripple" %></div><br>
+                                    <div class="month"><%== sprintf(f.date_select(:date, :use_month_numbers=>true, :date_separator => '%s', :start_year=>Time.now.year, :end_year => Time.now.year), '年','月') + '日'  %></div><div class="submit"><%= f.submit "送信", class: "btn btn-primary withripple" %></div><br>
                                      <div class="time">8:00<%= f.check_box :t8, placeholder: "stadium" %></div>
                                      <div class="time">9:00<%= f.check_box :t9, placeholder: "stadium" %></div>
                                      <div class="time">10:00<%= f.check_box :t10, placeholder: "stadium" %></div>
@@ -130,7 +130,7 @@
                                     <div class="court2">
                                      <p>＜横大路＞</p>
                                     </div>
-                                      <div class="month"><%= f.select :month,['01','02','03','04','05','06','07','08','09','10','11','12'] %>月<%= f.select :day,['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'] %>日</div><div class="submit"><%= f.submit "送信", class: "btn btn-primary withripple" %></div><br>
+                                      <div class="month"><%== sprintf(f.date_select(:date, :use_month_numbers=>true, :date_separator => '%s', :start_year=>Time.now.year, :end_year => Time.now.year), '年','月') + '日'  %></div><div class="submit"><%= f.submit "送信", class: "btn btn-primary withripple" %></div><br>
                                      <div class="time">8:00<%= f.check_box :t8, placeholder: "stadium" %></div>
                                      <div class="time">9:00<%= f.check_box :t9, placeholder: "stadium" %></div>
                                      <div class="time">10:00<%= f.check_box :t10, placeholder: "stadium" %></div>
@@ -162,14 +162,14 @@
               <div class="attend_minami">
                 <p>＜京都南＞</p>
                 <% @attend_dates.each do |attend_date| %>
-                <p><%= attend_date.month %>月<%= attend_date.day %>日
+                <p><%= attend_date.date %>
                   <%= link_to '削除', schedule_path(attend_date.id), confirm:'削除してもよろしいですか?', method: :delete %></p>
                 <% end %>
               </div>
               <div class="attend_yoko">
               <p>＜横大路＞</p>
                 <% @attend_dates2.each do |attend_date2| %>
-                <p><%= attend_date2.month %>月<%= attend_date2.day %>日
+                <p><%= attend_date2.date %>
                   <%= link_to '削除', schedule2_path(attend_date2.id), confirm:'削除してもよろしいですか?', method: :delete %></p>
                 <% end %>
               </div>
