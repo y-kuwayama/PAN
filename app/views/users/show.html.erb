@@ -162,7 +162,8 @@
               <div class="attend_minami">
                 <p>＜京都南＞</p>
                 <% @attend_dates.each do |attend_date| %>
-                <p><%= attend_date.date %>
+                <p><%= attend_date.date %><br>
+                  <%= link_to '詳細・編集', schedule_path(attend_date.id), method: :get %> /
                   <%= link_to '削除', schedule_path(attend_date.id), confirm:'削除してもよろしいですか?', method: :delete %></p>
                 <% end %>
               </div>

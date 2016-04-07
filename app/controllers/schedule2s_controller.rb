@@ -6,7 +6,7 @@ end
 
 def destroy
   schedule2 = Schedule2.find(params[:id])
-      if schedule.user_id == current_user.id
+      if schedule2.user_id == current_user.id
         schedule2.destroy
       end
 end
