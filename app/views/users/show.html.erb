@@ -67,13 +67,13 @@
                 <div class="image" style="background-image: url(<%= @users.avatar.url(:medium) %>);"></div>
                  <div class="prof_contents">
                        <div class="birth">
-                        <p>birth</p> <p><%= @users.day %></p>
+                        <p>birth : <%= @users.day %></p>
                       </div>
                       <div class="fav">
-                        <p>fav player</p> <p><%= @users.fav %></p>
+                        <p>fav player : <%= @users.fav %></p>
                       </div>
                       <div class="massage">
-                        <p>massage</p> <p><%= @users.massage %></p>
+                        <p>massage : <%= @users.massage %></p>
                       </div>
                 </div>
                  <% if current_user.id == @users.id %>
@@ -98,30 +98,43 @@
                                     <div class="court">
                                      <p>＜京都南＞</p>
                                     </div>
-                                    <div class="month"><%== sprintf(f.date_select(:date, :use_month_numbers=>true, :date_separator => '%s', :start_year=>Time.now.year, :end_year => Time.now.year), '年','月') + '日'  %></div><div class="submit"><%= f.submit "送信", class: "btn btn-primary withripple" %></div><br>
-                                     <div class="time">8:00<%= f.check_box :t8, placeholder: "stadium" %></div>
-                                     <div class="time">9:00<%= f.check_box :t9, placeholder: "stadium" %></div>
-                                     <div class="time">10:00<%= f.check_box :t10, placeholder: "stadium" %></div>
-                                     <div class="time">11:00<%= f.check_box :t11, placeholder: "stadium" %></div>
-                                     <div class="time">12:00<%= f.check_box :t12, placeholder: "stadium" %></div>
-                                     <div class="time">13:00<%= f.check_box :t13, placeholder: "stadium" %></div>
-                                     <div class="time">14:00<%= f.check_box :t14, placeholder: "stadium" %></div>
-                                     <div class="time">15:00<%= f.check_box :t15, placeholder: "stadium" %></div>
-                                     <div class="time">16:00<%= f.check_box :t16, placeholder: "stadium" %></div>
-                                     <div class="time">17:00<%= f.check_box :t17, placeholder: "stadium" %></div>
-                                     <div class="time">18:00<%= f.check_box :t18, placeholder: "stadium" %></div>
-                                     <div class="time">19:00<%= f.check_box :t19, placeholder: "stadium" %></div>
-                                     <div class="time">20:00<%= f.check_box :t20, placeholder: "stadium" %></div>
-                                     <div class="time">21:00<%= f.check_box :t21, placeholder: "stadium" %></div>
-                                     <div class="time">22:00<%= f.check_box :t22, placeholder: "stadium" %></div>
-                                     <div class="time">23:00<%= f.check_box :t23, placeholder: "stadium" %></div>
+                                    <div class="month"><%== sprintf(f.date_select(:date, :use_month_numbers=>true, :date_separator => '%s', :start_year=>Time.now.year, :end_year => Time.now.year), '年','月') + '日'  %></div><br>
+
+                                    <table class="demo02">
+                                      <thead>
+                                        <tr>
+                                          <th>08:00</br><%= f.check_box :t8, placeholder: "stadium" %></th>
+                                          <th>09:00</br><%= f.check_box :t9, placeholder: "stadium" %></th>
+                                          <th>10:00</br><%= f.check_box :t10, placeholder: "stadium" %></th>
+                                          <th>11:00</br><%= f.check_box :t11, placeholder: "stadium" %></th>
+                                          <th>12:00</br><%= f.check_box :t12, placeholder: "stadium" %></th>
+                                          <th>13:00</br><%= f.check_box :t13, placeholder: "stadium" %></th>
+                                          <th>14:00</br><%= f.check_box :t14, placeholder: "stadium" %></th>
+                                          <th>15:00</br><%= f.check_box :t15, placeholder: "stadium" %></th>
+                                          <th>16:00</br><%= f.check_box :t16, placeholder: "stadium" %></th>
+                                          <th>17:00</br><%= f.check_box :t17, placeholder: "stadium" %></th>
+                                          <th>18:00</br><%= f.check_box :t18, placeholder: "stadium" %></th>
+                                          <th>19:00</br><%= f.check_box :t19, placeholder: "stadium" %></th>
+                                          <th>20:00</br><%= f.check_box :t20, placeholder: "stadium" %></th>
+                                          <th>21:00</br><%= f.check_box :t21, placeholder: "stadium" %></th>
+                                          <th>22:00</br><%= f.check_box :t22, placeholder: "stadium" %></th>
+                                          <th>23:00</br><%= f.check_box :t23, placeholder: "stadium" %></th>
+
+                                        </tr>
+                                        </thead>
+                                      </table>
+                                      <div class="submit"><%= f.submit "送信", class: "btn btn-primary withripple" %></div>
                               </div>
                             <% end %>
                            </div>
                           </div>
                         </div>
 
-                      <!-- 京都南 -->
+
+
+
+
+                      <!-- 横大路 -->
                         <div class="row form">
                           <div class="col-lg-12">
                             <%= form_for @schedule2 do |f| %>
@@ -130,23 +143,31 @@
                                     <div class="court2">
                                      <p>＜横大路＞</p>
                                     </div>
-                                      <div class="month"><%== sprintf(f.date_select(:date, :use_month_numbers=>true, :date_separator => '%s', :start_year=>Time.now.year, :end_year => Time.now.year), '年','月') + '日'  %></div><div class="submit"><%= f.submit "送信", class: "btn btn-primary withripple" %></div><br>
-                                     <div class="time">8:00<%= f.check_box :t8, placeholder: "stadium" %></div>
-                                     <div class="time">9:00<%= f.check_box :t9, placeholder: "stadium" %></div>
-                                     <div class="time">10:00<%= f.check_box :t10, placeholder: "stadium" %></div>
-                                     <div class="time">11:00<%= f.check_box :t11, placeholder: "stadium" %></div>
-                                     <div class="time">12:00<%= f.check_box :t12, placeholder: "stadium" %></div>
-                                     <div class="time">13:00<%= f.check_box :t13, placeholder: "stadium" %></div>
-                                     <div class="time">14:00<%= f.check_box :t14, placeholder: "stadium" %></div>
-                                     <div class="time">15:00<%= f.check_box :t15, placeholder: "stadium" %></div>
-                                     <div class="time">16:00<%= f.check_box :t16, placeholder: "stadium" %></div>
-                                     <div class="time">17:00<%= f.check_box :t17, placeholder: "stadium" %></div>
-                                     <div class="time">18:00<%= f.check_box :t18, placeholder: "stadium" %></div>
-                                     <div class="time">19:00<%= f.check_box :t19, placeholder: "stadium" %></div>
-                                     <div class="time">20:00<%= f.check_box :t20, placeholder: "stadium" %></div>
-                                     <div class="time">21:00<%= f.check_box :t21, placeholder: "stadium" %></div>
-                                     <div class="time">22:00<%= f.check_box :t22, placeholder: "stadium" %></div>
-                                     <div class="time">23:00<%= f.check_box :t23, placeholder: "stadium" %></div>
+                                      <div class="month"><%== sprintf(f.date_select(:date, :use_month_numbers=>true, :date_separator => '%s', :start_year=>Time.now.year, :end_year => Time.now.year), '年','月') + '日'  %></div><br>
+                                     <table class="demo02">
+                                      <thead>
+                                        <tr>
+                                          <th>08:00</br><%= f.check_box :t8, placeholder: "stadium" %></th>
+                                          <th>09:00</br><%= f.check_box :t9, placeholder: "stadium" %></th>
+                                          <th>10:00</br><%= f.check_box :t10, placeholder: "stadium" %></th>
+                                          <th>11:00</br><%= f.check_box :t11, placeholder: "stadium" %></th>
+                                          <th>12:00</br><%= f.check_box :t12, placeholder: "stadium" %></th>
+                                          <th>13:00</br><%= f.check_box :t13, placeholder: "stadium" %></th>
+                                          <th>14:00</br><%= f.check_box :t14, placeholder: "stadium" %></th>
+                                          <th>15:00</br><%= f.check_box :t15, placeholder: "stadium" %></th>
+                                          <th>16:00</br><%= f.check_box :t16, placeholder: "stadium" %></th>
+                                          <th>17:00</br><%= f.check_box :t17, placeholder: "stadium" %></th>
+                                          <th>18:00</br><%= f.check_box :t18, placeholder: "stadium" %></th>
+                                          <th>19:00</br><%= f.check_box :t19, placeholder: "stadium" %></th>
+                                          <th>20:00</br><%= f.check_box :t20, placeholder: "stadium" %></th>
+                                          <th>21:00</br><%= f.check_box :t21, placeholder: "stadium" %></th>
+                                          <th>22:00</br><%= f.check_box :t22, placeholder: "stadium" %></th>
+                                          <th>23:00</br><%= f.check_box :t23, placeholder: "stadium" %></th>
+
+                                        </tr>
+                                        </thead>
+                                      </table>
+                                      <div class="submit"><%= f.submit "送信", class: "btn btn-primary withripple" %></div>
                               </div>
                             <% end %>
                            </div>
@@ -163,14 +184,15 @@
                 <p>＜京都南＞</p>
                 <% @attend_dates.each do |attend_date| %>
                 <p><%= attend_date.date %><br>
-                  <%= link_to '詳細・編集', schedule_path(attend_date.id), method: :get %> /
+                  <%= link_to '詳細・編集', edit_schedule_path(attend_date.id), method: :get %> /
                   <%= link_to '削除', schedule_path(attend_date.id), confirm:'削除してもよろしいですか?', method: :delete %></p>
                 <% end %>
               </div>
               <div class="attend_yoko">
               <p>＜横大路＞</p>
                 <% @attend_dates2.each do |attend_date2| %>
-                <p><%= attend_date2.date %>
+                <p><%= attend_date2.date %><br>
+                  <%= link_to '詳細・編集', edit_schedule2_path(attend_date2.id), method: :get %> /
                   <%= link_to '削除', schedule2_path(attend_date2.id), confirm:'削除してもよろしいですか?', method: :delete %></p>
                 <% end %>
               </div>

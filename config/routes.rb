@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "top#index"
   resources :top, only: :index
   resources :users, only: [:show, :edit, :update,:new ,:create]
-  resources :schedules, only:[:show,:create,:destroy]
-  resources :schedule2s, only:[:create,:destroy]
+  resources :schedules, only:[:show,:create,:destroy,:edit,:update]
+  resources :schedule2s, only:[:create,:destroy,:edit,:update]
 
 end

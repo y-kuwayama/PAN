@@ -1,8 +1,5 @@
 class SchedulesController < ApplicationController
 
-def show
-  @schedule = Schedule.find(params[:id])
-end
 
 def create
   Schedule.create(schedule_params)
@@ -15,6 +12,15 @@ def destroy
       end
 end
 
+
+def edit
+  @schedule = Schedule.find(params[:id])
+end
+
+  def update
+    schedule = Schedule.find(params[:id])
+    schedule.update(schedule_params)
+  end
 
 
     private

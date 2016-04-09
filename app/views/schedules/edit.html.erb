@@ -1,0 +1,106 @@
+
+<!-- header -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/">
+                    <span class="title_panna">PANN<span class="red">A.</span>P</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav", id="moji">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="">member</a>
+                    </li>
+                    <li>
+                        <%= link_to "logout", destroy_user_session_path, method: :delete, id:"moji_white"%>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+  </div>
+        <!-- /.container -->
+</nav>
+
+<!-- 詳細表示 -->
+<div class="detail_area">
+
+        <div class="reserved">
+        <%= @schedule.date %>の参加時間
+        </div>
+        <table class="demo02">
+        <thead>
+          <tr>
+            <th>08:00</br><% if  @schedule.t8  == 1 then %>○<% else %>×<% end %></th>
+            <th>09:00</br><% if  @schedule.t9  == 1 then %>○<% else %>×<% end %></th>
+            <th>10:00</br><% if  @schedule.t10  == 1 then %>○<% else %>×<% end %></th>
+            <th>11:00</br><% if  @schedule.t11  == 1 then %>○<% else %>×<% end %></th>
+            <th>12:00</br><% if  @schedule.t12  == 1 then %>○<% else %>×<% end %></th>
+            <th>13:00</br><% if  @schedule.t13  == 1 then %>○<% else %>×<% end %></th>
+            <th>14:00</br><% if  @schedule.t14  == 1 then %>○<% else %>×<% end %></th>
+            <th>15:00</br><% if  @schedule.t15  == 1 then %>○<% else %>×<% end %></th>
+            <th>16:00</br><% if  @schedule.t16  == 1 then %>○<% else %>×<% end %></th>
+            <th>17:00</br><% if  @schedule.t17  == 1 then %>○<% else %>×<% end %></th>
+            <th>18:00</br><% if  @schedule.t18  == 1 then %>○<% else %>×<% end %></th>
+            <th>19:00</br><% if  @schedule.t19  == 1 then %>○<% else %>×<% end %></th>
+            <th>20:00</br><% if  @schedule.t20  == 1 then %>○<% else %>×<% end %></th>
+            <th>21:00</br><% if  @schedule.t21  == 1 then %>○<% else %>×<% end %></th>
+            <th>22:00</br><% if  @schedule.t22  == 1 then %>○<% else %>×<% end %></th>
+            <th>23:00</br><% if  @schedule.t23  == 1 then %>○<% else %>×<% end %></th>
+
+          </tr>
+          </thead>
+        </table>
+        <div class="edit_time">参加時間を編集する</div>
+                      <div class="row form">
+                          <div class="col-lg-12">
+                            <%= form_for @schedule do |f| %>
+                             <div class="form-group">
+                              <div class="time_table">
+                                    <div class="court">
+                                    <table class="demo02">
+                                      <thead>
+                                        <tr>
+                                          <th>08:00</br><%= f.check_box :t8, placeholder: "stadium" %></th>
+                                          <th>09:00</br><%= f.check_box :t9, placeholder: "stadium" %></th>
+                                          <th>10:00</br><%= f.check_box :t10, placeholder: "stadium" %></th>
+                                          <th>11:00</br><%= f.check_box :t11, placeholder: "stadium" %></th>
+                                          <th>12:00</br><%= f.check_box :t12, placeholder: "stadium" %></th>
+                                          <th>13:00</br><%= f.check_box :t13, placeholder: "stadium" %></th>
+                                          <th>14:00</br><%= f.check_box :t14, placeholder: "stadium" %></th>
+                                          <th>15:00</br><%= f.check_box :t15, placeholder: "stadium" %></th>
+                                          <th>16:00</br><%= f.check_box :t16, placeholder: "stadium" %></th>
+                                          <th>17:00</br><%= f.check_box :t17, placeholder: "stadium" %></th>
+                                          <th>18:00</br><%= f.check_box :t18, placeholder: "stadium" %></th>
+                                          <th>19:00</br><%= f.check_box :t19, placeholder: "stadium" %></th>
+                                          <th>20:00</br><%= f.check_box :t20, placeholder: "stadium" %></th>
+                                          <th>21:00</br><%= f.check_box :t21, placeholder: "stadium" %></th>
+                                          <th>22:00</br><%= f.check_box :t22, placeholder: "stadium" %></th>
+                                          <th>23:00</br><%= f.check_box :t23, placeholder: "stadium" %></th>
+
+                                        </tr>
+                                        </thead>
+                                      </table>
+                                      <div class="submit"><%= f.submit "送信", class: "btn btn-primary withripple" %></div>
+                              </div>
+                            <% end %>
+                           </div>
+                          </div>
+                        </div>
+
+
+
+
+
+
+</div>
+

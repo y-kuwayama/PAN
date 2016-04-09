@@ -11,6 +11,16 @@ def destroy
       end
 end
 
+def edit
+  @schedule2 = Schedule2.find(params[:id])
+end
+
+  def update
+    schedule2 = Schedule2.find(params[:id])
+    schedule2.update(schedule_params)
+  end
+
+
 
 
 private
