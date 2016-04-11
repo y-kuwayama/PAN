@@ -15,3 +15,7 @@
  *= require_self
  *= require font-awesome
  */
+.title_panna{
+  color: white;
+}
+.brand-heading{font-size: 60px;}

@@ -10,7 +10,11 @@
 .intro{
   background-image: url('main.jpg');
   background-position: center;
+  padding-top: 70px;
+  p{font-size: 30px;}
 }
+
+#brand-heading{font-size: 80px;}
 
 #moji li a{
   color: white;
@@ -26,14 +30,25 @@
 }
 
 #massage{
+  width: 100%;
   padding-top: 90px;
   height:400px;
+  background-color: black;
+  margin: 0;
+  color: white;
+  h3{margin: 20px;font-family:"HG行書体","HGP行書体",cursive;}
+}
+
+
+#now{
+  color: black;
+  background-color: white;
 }
 
 
 
 #style {
-
+  background-color: black;
   padding: 0;
   width:100%;
   display: inline-block;
@@ -57,19 +72,30 @@
 
 .right_contents_massage{
   display: inline-block;
-  height: 350px;
-  width:50%;
+  height: 200px;
+  width:100%;
   margin:0 auto;
   text-align: center;
+  color: white;
+  margin-top:10px;
+  p{font-size: 80px;margin: 10px;height: 60px;font-family:"HG行書体","HGP行書体",cursive;}
 }
 
 .rightmassage{
   margin-top: 20px;
+  width: 100%;
+  p{display: inline-block;}
 }
 
 
 
 #under_contents{
+  padding: 0;
   width:100%;
-  background: black;
+  height: 300px;
+  background: white;
 }
+
+footer {height: 20px;padding: 0;}
+
+
