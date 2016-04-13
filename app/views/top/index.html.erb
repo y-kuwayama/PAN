@@ -22,7 +22,7 @@
     <section id="massage" class="container content-section text-center" >
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-            <h3>＜Futebolisuta = ボールを蹴ってれば幸せな人種＞</h3></br>
+            <h3>＜Futebolisuta = ボールを蹴っていれば幸せな人種＞</h3></br>
                 <h3>そんな人種に出会ったことはあるか？</h3>
                 <h3>ボールが丸い意味を知っているか？</h3>
                 <h3>ボールが丸い意味をFUTEBOLISUTAとともに<h3>
@@ -37,7 +37,12 @@
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Now count</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                            <%= form_tag('/top', method: :get) do %>
+                             <input class="search__query" name="keyword" placeholder="作品名で検索" type="date" value=""><input class="btn-search" title="検索" type="submit" value="検索する"><i class="icon-search"></i></button></input>
+                             <% end %>
+                             <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">
+                            </form>
+
                 </div>
             </div>
         </div>
