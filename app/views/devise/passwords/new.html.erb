@@ -4,11 +4,11 @@
   </div>
 
   <div class='inner_block'>
-    <div class='login_title'>
-    <p>Forgot your password?</p>
-   </div>
+    <div class="pass_waku">
 
-    <div class="waku">
+     <div class='login_title'>
+    <a>Forgot your password?</a>
+   </div>
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>
 

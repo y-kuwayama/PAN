@@ -25,24 +25,30 @@
             <h3>＜Futebolisuta = ボールを蹴っていれば幸せな人種＞</h3></br>
                 <h3>そんな人種に出会ったことはあるか？</h3>
                 <h3>ボールが丸い意味を知っているか？</h3>
-                <h3>ボールが丸い意味をFUTEBOLISUTAとともに<h3>
-                <h3>最高の時間を............最高の仲間と...........</h3>
+                <h3>ボールが丸い意味をFUTEBOLISUTAとともに......<h3>
             </div>
         </div>
     </section>
 
     <!-- Download Section -->
     <section  class="content-section text-center" style="padding:0;">
-        <div id="now" class="download-section" style="height:500px;">
+        <div id="now" class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Now count</h2>
-                            <%= form_tag('/top', method: :get) do %>
-                             <input class="search__query" name="keyword" placeholder="作品名で検索" type="date" value=""><input class="btn-search" title="検索" type="submit" value="検索する"><i class="icon-search"></i></button></input>
-                             <% end %>
-                             <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">
-                            </form>
-
+                    <h3>京都南　</h3>
+                     <%= form_tag('/top', method: :get) do %>
+                        <input class="search__query" name="keyword" placeholder="作品名で検索" type="date" value=""><input   class="btn-search" title="検索" type="submit" value="検索する" style="display:inline-block"><i class="icon-search" style="display:inline-block"></i></button></input>
+                     <% end %>
+                     <form accept-charset="utf-8" action="#now" class="js-search-submit" method="get"></form>
+                     <%= column_chart @chart_data,min: 0, max: 20 ,xtitle: "Time" ,ytitle: "attendance"%>
+                </div>
+                <div id='chart_margin' class="col-lg-8 col-lg-offset-2">
+                    <h3>横大路　</h3>
+                     <%= form_tag('/top', method: :get) do %>
+                        <input class="search__query" name="keyword" placeholder="作品名で検索" type="date" value=""><input   class="btn-search" title="検索" type="submit" value="検索する" style="display:inline-block"><i class="icon-search" style="display:inline-block"></i></button></input>
+                     <% end %>
+                     <form accept-charset="utf-8" action="/" class="js-search-submit" method="get"></form>
+                     <%= column_chart @chart_data2,min: 0, max: 20 ,xtitle: "Time" ,ytitle: "attendance"%>
                 </div>
             </div>
         </div>

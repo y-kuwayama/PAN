@@ -48,5 +48,6 @@ group :development do
   gem 'devise'
   gem 'jquery-turbolinks'#ページ遷移修正gem
   gem 'paperclip'
+  gem "chartkick"
 end
 

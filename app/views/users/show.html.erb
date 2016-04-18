@@ -1,51 +1,32 @@
 <% unless current_user.full_profile? %>
-  <header class="header_top panel panel-default col-lg-12 no-profile">
+  <div id="first_profile" class="header_top panel-default col-lg-12 no-profile">
     <h2>まずは、あなたのプロフィールを登録しましょう！</h2>
     <%= link_to "プロフィールを登録する", edit_user_path(current_user), { class: "btn btn-lg btn-primary withripple" } %>
-  </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </div>
 
 <% else %>
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
   <div class="container">
-            <div class="navbar-header">
+     <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="/">
                     <span class="title_panna">PANN<span class="red">A.</span>P</span>
                 </a>
-            </div>
-
+       </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav", id="moji">
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+             <ul class="nav navbar-nav", id="moji">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="">member</a>
-                    </li>
-                    <li>
-                        <%= link_to "logout", destroy_user_session_path, method: :delete, id:"moji_white"%>
-                    </li>
-                </ul>
-            </div>
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <%= link_to "logout", destroy_user_session_path, method: :delete, id:"moji_white"%>
+                </li>
+              </ul>
+          </div>
             <!-- /.navbar-collapse -->
   </div>
         <!-- /.container -->
@@ -97,6 +78,7 @@
                               <div class="time_table">
                                     <div class="court">
                                      <p>＜京都南＞</p>
+                                     <%= link_to "空き時間の確認", "https://www.vlcm.net/rc/pc/index.php?action_CRA01_01do=true&cid=00086"  %>
                                     </div>
                                     <div class="month"><%== sprintf(f.date_select(:date, :use_month_numbers=>true, :date_separator => '%s', :start_year=>Time.now.year, :end_year => Time.now.year), '年','月') + '日'  %></div><br>
 
@@ -142,6 +124,7 @@
                               <div class="time_table">
                                     <div class="court2">
                                      <p>＜横大路＞</p>
+                                     <%= link_to "空き時間の確認", "https://www.vlcm.net/rc/pc/index.php?action_CRA01_01do=true&cid=00086"  %>
                                     </div>
                                       <div class="month"><%== sprintf(f.date_select(:date, :use_month_numbers=>true, :date_separator => '%s', :start_year=>Time.now.year, :end_year => Time.now.year), '年','月') + '日'  %></div><br>
                                      <table class="demo02">
@@ -175,9 +158,8 @@
                         </div>
 
             </div>
-
             <!-- 投稿済み -->
-            <div class="attend_date">
+          <div class="attend_date">
               <p>Now your Attendance</p>
             <div class="attendance_contents">
               <div class="attend_minami">
@@ -198,8 +180,8 @@
               </div>
             </div>
 
-   </div>
-</div>
+          </div>
+  </div>
 <% end %>
 
 
